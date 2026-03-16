@@ -9,7 +9,7 @@
  * - request animation frame calling the function into infinite loop
  */
 
-/* Single main loop (Lab 2 + Lab 3) */
+
 function animate() {
    requestAnimationFrame(animate);
    controls.update();
