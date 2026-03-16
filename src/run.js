@@ -1,4 +1,3 @@
-// Define the main run function to start the lab
 /* Define the run function
  * - setup the scene (scene, camera, renderer, controls)
  * - build and add shapes (Sun, Earth, Moon)

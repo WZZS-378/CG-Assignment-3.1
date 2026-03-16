@@ -81,7 +81,7 @@ function generateTerrainGrid(rows, cols, spacing, baseSize, minHeight, maxHeight
             }
 
             // Add random structures on some cubes
-            if (Math.random() < housesChance && height < minHeight + (maxHeight - minHeight) * 0.4) { // chance to add a village
+            if (Math.random() < housesChance && height < minHeight + (maxHeight - minHeight) * 0.4) { // chance to add a village on lower terrain
                 let village = createVillage(3, baseSize / 2);
                 village.position.set(x, height * baseSize, z);
                 scene.add(village);
@@ -91,9 +91,6 @@ function generateTerrainGrid(rows, cols, spacing, baseSize, minHeight, maxHeight
                 castle.position.set(x, height * baseSize, z);
                 scene.add(castle);
             }
-            
-            // let colorVariation = Math.floor(Math.random() * 0x30);
-            // let color = baseColor + colorVariation * 0x010101;
 
             // Create cube, scale by height, position on grid, and add to scene
             let cube = createCube(baseSize, baseColor);
@@ -104,12 +101,7 @@ function generateTerrainGrid(rows, cols, spacing, baseSize, minHeight, maxHeight
     }
 }
 
-// Define the build system function
-function buildSystem() {
-    // generate terrain grid (rows, cols, spacing, baseSize, minHeight, maxHeight, baseColor, housesChance, castlesChance)
-    generateTerrainGrid(8, 8, 3.0, 3, 0.5, 1, 0.4, 0.05);
-}
 // Define the add shapes function
-function addShapes() {
-    buildSystem(); // generate terrain with random villages and castles
+function addShapes(){
+        generateTerrainGrid(8, 8, 3.0, 3, 0.5, 1, 0.4, 0.05);
 }

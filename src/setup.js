@@ -22,6 +22,7 @@ function setScene() {
     renderer.setPixelRatio(window.devicePixelRatio); // improve clarity on high-resolution screens
     renderer.setSize(window.innerWidth, window.innerHeight); // make renderer fill entire browser window
     document.body.appendChild(renderer.domElement); // attach renderer canvas to HTML page
+
     // enable mouse orbit and zoom controls
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.enableZoom = true; // allow mouse wheel zooming
@@ -30,7 +31,6 @@ function setScene() {
     controls.enableDamping = true; // enable smooth camera inertia motion
     controls.dampingFactor = 0.08; // control how quickly camera movement slows
     controls.enablePan = false; // disable camera panning (left/right/up/down)
-   
 }
 
 /* Define the resize screen function
