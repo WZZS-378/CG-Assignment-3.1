@@ -60,6 +60,9 @@ function createCastle(size) {
 
 // Generate a grid of cubes with random heights/colors for terrain
 function generateTerrainGrid(rows, cols, spacing, baseSize, minHeight, maxHeight, housesChance, castlesChance) {
+    spacing = baseSize * 1.05; // adjust spacing based on base size to prevent overlap
+    
+    // Loop through grid positions and create cubes with random heights and colors
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             var baseColor;

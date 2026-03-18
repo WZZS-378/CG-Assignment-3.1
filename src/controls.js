@@ -38,9 +38,10 @@ window.addEventListener('DOMContentLoaded', function() {
     if (typeof dat === 'undefined') return;
     const gui = new dat.GUI({ autoPlace: false });
     document.getElementById('menu').appendChild(gui.domElement);
-
+// Add controls for parameters
     gui.add(params, 'rows', 2, 30, 1).onFinishChange(params.regenerate);
     gui.add(params, 'cols', 2, 30, 1).onFinishChange(params.regenerate);
+    gui.add(params, 'baseSize', 1, 10, 0.1).onFinishChange(params.regenerate);
     gui.add(params, 'minHeight', 0.1, 2, 0.1).onFinishChange(params.regenerate);
     gui.add(params, 'maxHeight', 0.2, 2, 0.1).onFinishChange(params.regenerate);
     gui.add(params, 'housesChance', 0, 1, 0.01).onFinishChange(params.regenerate);
