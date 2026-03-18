@@ -36,7 +36,7 @@ const params = {
 // Initialize dat.GUI
 window.addEventListener('DOMContentLoaded', function() {
     if (typeof dat === 'undefined') return;
-    const gui = new dat.GUI({ autoPlace: false });
+    let gui = new dat.GUI({ autoPlace: false });
     document.getElementById('menu').appendChild(gui.domElement);
 // Add controls for parameters
     gui.add(params, 'rows', 2, 30, 1).onFinishChange(params.regenerate);
